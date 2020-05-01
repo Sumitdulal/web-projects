@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>html-5 form</title>
+</head>
+<body>
+    <h1>Search here: </h1>
+    <form id="upper-search" action="url" method="post">
+        <ul>
+            <li>
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="search" placeholder="search!">
+            </li>
+        </ul>
+    </form>
+        <h2>OR</h2>
+    <h1>Generate House list by filling form below:</h1>
+    <form action="url" method="post">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Type your name">
+            </li>
+            
+            <li>
+                <label for="telephone">Telephone:</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="ex:123456789">
+            </li>
+            <li>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="email" placeholder="example@provider.com">
+            </li>
+            
+            
+           
+            
+            <li>
+                <label for="url">Preferred real state website:</label>
+                <input type="url" id="url" name="url" placeholder="http://www.google.com/">
+            </li>
+            <li>
+                <label for="age">Storey:</label>
+                <input type="number" name="age" placeholder="ex:3" id="age" min="1" max="7" step="1">
+            </li>
+            
+            <li>
+                <label for="price">Maximum budget for house :</label>
+                <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+                <output class="price-output" for="price"></output>
+            </li>
+            
+            <li>
+                <label for="color">Preferred Color:</label>
+                <input type="color" name="color" id="color">
+            </li>
+            <li>
+                <label for="myDate">Deadline to buy house:</label>
+                <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate">
+            </li>
+            <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="message" placeholder="Type your message here"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Submit your form</button>
+
+            </li>
+        </ul>
+    </form>
+            <script>
+                const price = document.querySelector('#price');
+const output = document.querySelector('.price-output');
+
+output.textContent = price.value;
+
+price.addEventListener('input', function() {
+  output.textContent = price.value;
+});
+            </script>
+        
+</body>
+</html>
